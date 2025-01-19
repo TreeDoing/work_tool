@@ -1,0 +1,10 @@
+下载仓库：
+1. 下载分支：git clone
+2. 切换对应分支：switch checkout
+3. 跟新子模块：submodule add
+
+更新仓库：
+1. fetch+merge；pull；fetch+rebase
+
+1. 新增文件添加到暂存区：Add
+2. 
