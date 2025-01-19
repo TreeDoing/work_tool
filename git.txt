@@ -50,11 +50,40 @@
 3.推送到远端：	git push -u origin main:main
 		git push --set-upstream origin featrue-1:main
 4.拉取远端代码：git clone https://github.com/TreeDoing/test2.git
-5.远端与本地仓库关联关系查看：git branch -vv
+5.远端与本地仓库关联关系查看：git branch -vv；git remote -v
 6.本地仓库与远端仓库关联：git checkout -b <branch> <remote>/<branch>
 7.更新+合并最新代码：git fetch + git merge origin/"branch_name"
 8.更新合并代码：git pull
 9.更新+合并代码：git fetch + git rebase
+
+
+五、-----实战---------
+1. 将项目 clone 到本地：git clone git@github.com:S16201512/learngit-1.git
+2. 创建分支 hwy-branch-study：git checkout -b hwy-branch-study
+3. 查看分支状态：git branch
+4. 修改分支的内容
+5. 建立 本地仓库 与 自己账号的远程仓库 的关联：git remote add origin git@github.com:S16201512/learngit-1.git
+6. 建立 本地仓库 与 项目源仓库的关联：git remote add upstream git@github.com:michaelliao/learngit.git
+7.  查看仓库连接建立情况：git remote -v
+8. 将本分支hwy-branch-study的内容同步到 自己github项目仓库：git push origin hwy-branch-study
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
