@@ -51,7 +51,7 @@
 		git push --set-upstream origin featrue-1:main
 4.拉取远端代码：git clone https://github.com/TreeDoing/test2.git
 5.远端与本地仓库关联关系查看：git branch -vv；git remote -v
-6.本地仓库与远端仓库关联：git checkout -b <branch> <remote>/<branch>
+6.本地仓库分支与远端仓库分支关联：git checkout -b <branch> <remote>/<branch>
 7.更新+合并最新代码：git fetch + git merge origin/"branch_name"
 8.更新合并代码：git pull
 9.更新+合并代码：git fetch + git rebase
