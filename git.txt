@@ -1,0 +1,60 @@
+一、------------安装-------------
+1. 安装git
+2. 在git bash中设置名字和邮箱
+	a. git config --global user.name "chenjiw"
+	b. git config --global user.email "jiwangchen.post@email"
+3.防止乱码问题
+	a.git config --global core.quotepath false
+	b.git安装目录，/etc/bash.bashrc,文件后添加：
+		export LANG="zh_CN.UTF-8"
+		export LC_ALL="zh_CN.UTF-8"
+4.给指令添加别名
+	a. touch ~/.bashrc
+	b. vi ~/.bashrc
+	c. 别名内容添加：
+		#输出git提交日志
+		alias git-log='git log --all --pretty=oneline --abbrev-commit --graph'
+		#输出所有文件信息
+		alias ll='ls -al'
+	d. 生效：source ~/.bashrc
+
+二、----------基本操作-----------
+0. 初始化：git init
+1. 添加暂存区：git add “file name”、git add .
+2. 查看当前状态：git status
+3. 添加到本地仓库：git commit -m "commit tips"
+4. 查看git历史：git log、进阶：git log --all --pretty=oneline --abbrev-commit --graph （显示内容head表示当前分支）
+5. 版本硬回退：git reset str_commitID --hard
+
+三、-----------分支------------
+1. 查看本地分支：git branch
+2. 创建分支：git branch "branch_name”
+3. 切换分支：git checkout "branch_name"
+4. 创建并切换分支：git checkout -b "branch_name"
+5. 删除分支：git branch -d “branch_name”; 强制删除：git branch -D "branch_name" 
+6. 合并分支：git merge "branch_name”
+
+四、----------远端仓库------------
+1.远端仓库部署：
+	a.生成密匙：keygen -ssh
+	b.获取密匙：cat ~/.ssh/id_rsa.pub
+	c.粘贴到github中的ssh密匙中
+	d.GitHub建立仓库：a.新建项目 b.从pc上传项目
+
+2.获取远端仓库：git remote add origin https://github.com/TreeDoing/test2.git
+
+3.代理：
+	git config --global --add remote.origin.proxy "127.0.0.1:7890"	
+	git config --global https.proxy 127.0.0.1:7890	
+
+3.推送到远端：	git push -u origin main:main
+		git push --set-upstream origin featrue-1:main
+4.拉取远端代码：git clone https://github.com/TreeDoing/test2.git
+5.远端与本地仓库关联关系查看：git branch -vv
+6.本地仓库与远端仓库关联：git checkout -b <branch> <remote>/<branch>
+7.更新+合并最新代码：git fetch + git merge origin/"branch_name"
+8.更新合并代码：git pull
+9.更新+合并代码：git fetch + git rebase
+
+
+
